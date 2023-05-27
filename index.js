@@ -12,20 +12,13 @@ FilePond.registerPlugin(
   
   // Select the file input and use 
   // create() to turn it into a pond
-  FilePond.create(
+  const pond = FilePond.create(
     document.querySelector('input')
   );
   
   // How to use with Pintura Image Editor:
   // https://pqina.nl/pintura/docs/latest/getting-started/installation/filepond/
 
-import { parse } from 'filepond';
-import 'filepond/dist/filepond.css';
 
-// Get a file input reference
-const input = document.querySelector('input[type="file"]');
+  var recentFile = pond.getFile();
 
-// Create a FilePond instance and post files to /upload
-create(input, {
-    server: '/upload',
-});
