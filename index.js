@@ -18,3 +18,14 @@ FilePond.registerPlugin(
   
   // How to use with Pintura Image Editor:
   // https://pqina.nl/pintura/docs/latest/getting-started/installation/filepond/
+
+import { parse } from 'filepond';
+import 'filepond/dist/filepond.css';
+
+// Get a file input reference
+const input = document.querySelector('input[type="file"]');
+
+// Create a FilePond instance and post files to /upload
+create(input, {
+    server: '/upload',
+});
